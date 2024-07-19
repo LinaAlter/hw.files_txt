@@ -1,6 +1,3 @@
-#with open('text_1.txt', 'a', encoding = 'utf-8') as file_1, open ('text_2.txt', 'a', encoding = 'utf-8') as file_2, open ('text_3.txt', 'a', encoding = 'utf-8') as file_3:
-    
-
 with open('text_1.txt', encoding = 'utf-8') as file_1, open ('text_2.txt', encoding = 'utf-8') as file_2, open ('text_3.txt', encoding = 'utf-8') as file_3:
     
         
