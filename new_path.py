@@ -7,18 +7,19 @@ def parse_folder(path):
         files_names = []     
         for name in files:
             files_names.append(name)
-        print(files_names)
-        return files_names
-    
+        #print(files_names)
+    return files_names        
+        
+fn = parse_folder(folder_path)        
+print(fn)
+
 def read_from_folder(path):
-    for file in os.listdir(folder_path):
-        with open(file) as f:
+    for f in fn:
+        with open(f) as file:
             files = []
-            files.append(file.readlines())
-            print(files)
-            return files
-
-
+            files.append(f)
+            print(files)    
+'''
 def len_of_files(path):
     for file in os.listdir(folder_path):
         with open(file) as f:        
@@ -27,11 +28,11 @@ def len_of_files(path):
             len_f.append(len(f))
         s_len_f = sorted(len_f)
         print(s_len_f)
-            
+'''            
     
 parse_folder(folder_path)    
-read_from_folder(folder_path)
-len_of_files(folder_path)
+#read_from_folder(folder_path)
+#len_of_files(folder_path)
 
 
 
