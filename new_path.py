@@ -1,22 +1,28 @@
 import os
 
 folder_path = 'C:\\Users\\alcen\\OneDrive\\Рабочий стол\\hw.files_txt\\file_with_txt'
-def parse_folder(folder_path):
+def parse_folder(path):
 
     for root, dirs, files in os.walk(folder_path, topdown=False): 
         files_names = []     
         for name in files:
             files_names.append(name)
         print(files_names)
-        #return files_names
+        return files_names
     
+def read_from_folder(path):
     for file in os.listdir(folder_path):
         with open(file) as f:
             files = []
             files.append(file.readlines())
             print(files)
-            len_f = []
-            
+            return files
+
+
+def len_of_files(path):
+    for file in os.listdir(folder_path):
+        with open(file) as f:        
+            len_f = []            
             f.readlines()
             len_f.append(len(f))
         s_len_f = sorted(len_f)
@@ -24,8 +30,8 @@ def parse_folder(folder_path):
             
     
 parse_folder(folder_path)    
- 
-
+read_from_folder(folder_path)
+len_of_files(folder_path)
 
 
 
